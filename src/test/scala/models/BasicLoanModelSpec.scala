@@ -5,7 +5,7 @@ import org.scalatest.funspec.AnyFunSpec
 
 class BasicLoanModelSpec extends AnyFunSpec {
 
-  describe("A generic base model") {
+  describe("A generic loan borrower model") {
     val m =
       BasicLoanModel(
         originator = RequiredStringField[Originator]("LC"),
