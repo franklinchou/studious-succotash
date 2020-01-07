@@ -1,5 +1,5 @@
 package fields
 
-case class OptionalStringField[Option[String]](f: Option[String]) extends AnyVal
+case class OptionalStringField[A](f: Option[String]) extends AnyVal
 
-sealed trait OriginatorNoteId[Option[String]]
+sealed trait OriginatorNoteId[A]
