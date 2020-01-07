@@ -3,11 +3,11 @@ package models
 import fields.{Originator, OriginatorLoanId, RequiredStringField}
 import org.scalatest.funspec.AnyFunSpec
 
-class LoanBorrowerModelSpec extends AnyFunSpec {
+class BasicLoanModelSpec extends AnyFunSpec {
 
   describe("A generic base model") {
     val m =
-      ConcreteLoanBorrowerModel(
+      BasicLoanModel(
         originator = RequiredStringField[Originator]("LC"),
         originatorLoanId = RequiredStringField[OriginatorLoanId]("1234"),
         // originatorNoteId = OptionalStringField[OriginatorNoteId](Some(""))

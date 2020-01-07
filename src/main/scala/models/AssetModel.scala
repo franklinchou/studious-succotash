@@ -2,7 +2,7 @@ package models
 
 import fields.{Originator, OriginatorLoanId, RequiredStringField}
 
-trait LoanBorrowerModel {
+trait AssetModel {
 
   val originator: RequiredStringField[Originator]
 
