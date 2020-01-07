@@ -7,7 +7,6 @@ case class GenericLoanModel(originator: RequiredStringField[Originator],
                             originatorNoteId: OptionalStringField[OriginatorNoteId[Option[String]]]
                            ) extends AssetModel {
 
-  // TODO add note id
-  val id = s"$originator$originatorLoanId"
+  val id = s"$originator$originatorLoanId${originatorNoteId.f.getOrElse("")}"
 
 }
