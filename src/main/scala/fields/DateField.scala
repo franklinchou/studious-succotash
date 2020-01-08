@@ -2,7 +2,7 @@ package fields
 
 import java.time.LocalDate
 
-case class RequiredDateField[A](f: LocalDate) extends AnyVal {
+case class DateField[A](f: LocalDate) extends AnyVal {
 
   override def toString: String = f.toString
 

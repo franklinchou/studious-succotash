@@ -1,6 +1,6 @@
 package fields
 
-case class RequiredIntField[A](f: Int) extends AnyVal {
+case class BigDecimalField[A](f: BigDecimal) extends AnyVal {
 
   override def toString: String = f.toString
 

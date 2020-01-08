@@ -1,6 +1,6 @@
 package fields
 
-case class RequiredBooleanField[A](f: Boolean) extends AnyVal {
+case class IntField[A](f: Int) extends AnyVal {
 
   override def toString: String = f.toString
 

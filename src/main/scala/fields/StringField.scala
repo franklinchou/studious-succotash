@@ -1,6 +1,6 @@
 package fields
 
-case class RequiredStringField[A](f: String) extends AnyVal {
+case class StringField[A](f: String) extends AnyVal {
 
   override def toString: String = f
 
@@ -8,3 +8,4 @@ case class RequiredStringField[A](f: String) extends AnyVal {
 
 sealed trait OriginatorLoanId
 sealed trait Originator
+sealed trait OriginatorNoteId
