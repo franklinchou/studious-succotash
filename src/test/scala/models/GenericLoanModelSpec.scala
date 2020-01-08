@@ -1,6 +1,8 @@
 package models
 
-import fields.{Originator, OriginatorLoanId, OriginatorNoteId, StringField}
+import java.time.LocalDate
+
+import fields._
 import org.scalatest.funspec.AnyFunSpec
 
 class GenericLoanModelSpec extends AnyFunSpec {
@@ -9,7 +11,8 @@ class GenericLoanModelSpec extends AnyFunSpec {
     val m =
       GenericLoanModel(
         originator = StringField[Originator]("LC"),
-        originatorLoanId = StringField[OriginatorLoanId]("1234")
+        originatorLoanId = StringField[OriginatorLoanId]("1234"),
+        periodEndDate = DateField[PeriodEndDate](LocalDate.of(2020, 1, 8))
       )
 
     it("should be none") {
@@ -27,6 +30,7 @@ class GenericLoanModelSpec extends AnyFunSpec {
       GenericLoanModel(
         originator = StringField[Originator]("LC"),
         originatorLoanId = StringField[OriginatorLoanId]("1234"),
+        periodEndDate = DateField[PeriodEndDate](LocalDate.of(2020, 1, 8)),
         originatorNoteId = Some(StringField[OriginatorNoteId]("A"))
       )
 
@@ -35,6 +39,7 @@ class GenericLoanModelSpec extends AnyFunSpec {
       assert(m.originator == StringField[Originator]("LC"))
       assert(m.originatorLoanId == StringField[OriginatorLoanId]("1234"))
       assert(m.originatorNoteId.contains(StringField[OriginatorNoteId]("A")))
+      assert(m.periodEndDate == DateField[PeriodEndDate](LocalDate.of(2020, 1, 8)))
     }
 
     it("should have an id") {
