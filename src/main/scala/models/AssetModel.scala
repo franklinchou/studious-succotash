@@ -1,11 +1,11 @@
 package models
 
-import fields.{Originator, OriginatorLoanId, RequiredStringField}
+import fields.{Originator, OriginatorLoanId, StringField}
 
 trait AssetModel {
 
-  val originator: RequiredStringField[Originator]
+  val originator: StringField[Originator]
 
-  val originatorLoanId: RequiredStringField[OriginatorLoanId]
+  val originatorLoanId: StringField[OriginatorLoanId]
 
 }
